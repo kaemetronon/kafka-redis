@@ -1,0 +1,10 @@
+USE postdb;
+
+DROP TABLE IF EXISTS logs;
+
+CREATE TABLE logs
+(
+    id   INT AUTO_INCREMENT PRIMARY KEY,
+    type VARCHAR(64)                                                     NOT NULL,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL
+);
